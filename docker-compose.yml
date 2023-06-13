@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+  sourcegraph:
+    image: sourcegraph/server:3.42.0
+    ports:
+    - 127.0.0.1:7443:7443
+    - 127.0.0.1:7080:7080
+    - 127.0.0.1:3370:3370
+    volumes:
+    - ~/.sourcegraph/config:/etc/sourcegraph
+    - ~/.sourcegraph/data:/var/opt/sourcegraph
